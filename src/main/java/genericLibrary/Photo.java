@@ -9,14 +9,13 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 public class Photo {
-	
-	public void getPhot(WebDriver driver,String name) throws Throwable {
-		
-	TakesScreenshot ts=(TakesScreenshot)driver;
-   File	src=ts.getScreenshotAs(OutputType.FILE);
-	File dest=new File(IPathConstant.photo+name+".png");
-	FileUtils.copyFile(src, dest);
-	
-	
-	
-}}
+
+	public void getPhot(WebDriver driver, String name) throws Throwable {
+
+		TakesScreenshot ts = (TakesScreenshot) driver;
+		File src = ts.getScreenshotAs(OutputType.FILE);
+		File dest = new File(IPathConstant.photo + name + ".png");
+		FileUtils.copyFile(src, dest);
+
+	}
+}

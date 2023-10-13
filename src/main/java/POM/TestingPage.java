@@ -8,18 +8,21 @@ import org.openqa.selenium.support.PageFactory;
 
 public class TestingPage {
 //declaration
-	//address of face web  element
-	@FindBy(xpath="(//i[@class='fa fa-facebook'])[2]")
+	// address of face web element
+	@FindBy(xpath = "(//i[@class='fa fa-facebook'])[2]")
 	private WebElement fbIcon;
-	//Initialization
+
+	// Initialization
 	public TestingPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
-	//utilization
-	public void fbIconWebElement()
-	{
+
+	// utilization
+	public void fbIconWebElement() {
 		fbIcon.click();
 	}
+
 	public WebElement getFbIcon() {
-	     return fbIcon;
-	}}
+		return fbIcon;
+	}
+}
